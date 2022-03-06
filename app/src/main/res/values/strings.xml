@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Firebase Sample</string>
+    <string name="sing_up">SIGNUP</string>
+    <string name="connect_with_facebook">Or connect with Facebook</string>
+    <string name="log_in">LOGIN</string>
+    <string name="password">Password</string>
+    <string name="user_name">username</string>
+</resources>

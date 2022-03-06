@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "1095553835051",
+    "firebase_url": "https://test-proj-f8ee6.firebaseio.com",
+    "project_id": "test-proj-f8ee6",
+    "storage_bucket": "test-proj-f8ee6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1095553835051:android:4af073abae0e156bf30a6e",
+        "android_client_info": {
+          "package_name": "com.example.firebasesample"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYpj4uaIamHd2UhPSIAkmOelp4UTaO2_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1095553835051:android:dace3007ab4ab29a",
+        "android_client_info": {
+          "package_name": "com.example.minapc.motionsensornumericalview"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYpj4uaIamHd2UhPSIAkmOelp4UTaO2_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
