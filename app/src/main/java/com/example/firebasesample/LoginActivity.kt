@@ -29,7 +29,52 @@ class LoginActivity : AppCompatActivity() {
 
     private fun logIn() {
         login_button.setOnClickListener {
+            when {
+                TextUtils.isEmpty(user_name.text.toString().trim{ it<= ' '})->{
+                    Toast.makeText(this,
+                        "Please Enter Email",
+                        Toast.LENGTH_LONG).show()
 
+                }
+
+                TextUtils.isEmpty(password.text.toString().trim{it <= ' '})->{
+                    Toast.makeText(this,
+                        "Please Enter Password",
+                        Toast.LENGTH_LONG).show()
+                }
+                else ->{
+                    var email =user_name.text.toString().trim{ it<= ' '}
+                    var password=password.text.toString().trim{it <= ' '}
+
+                    FirebaseAuth.getInstance().signInWithEmailAndPassword(email,password)
+                        .addOnCompleteListener { task ->
+                            if (task.isSuccessful) {
+                                val firebaseUser: FirebaseUser = task.result!!.user!!
+
+                                Toast.makeText(
+                                    this,
+                                    "You registered",
+                                    Toast.LENGTH_LONG
+                                ).show()
+                                val intent = Intent (this,MainActivity::class.java)
+                                intent.flags=Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                                intent.putExtra("user_id",firebaseUser.uid)
+                                intent.putExtra("email_id",email)
+                                startActivity(intent)
+                                finish()
+                            } else {
+                                Toast.makeText(
+                                    this,
+                                    task.exception!!.message.toString(),
+                                    Toast.LENGTH_LONG
+                                ).show()
+
+                            }
+                        }
+
+
+                }
+            }
         }
     }
 
